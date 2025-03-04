@@ -43,7 +43,7 @@ jobs:
     - name: 'Notify NUR'
       if: "success() && matrix.nix-path == 'nixpkgs=channel:nixos-unstable' &&
         github.event_type == 'push' && github.ref == 'refs/heads/master'"
-      uses: CamiloGarciaLaRotta/watermelon-http-client@v1.5
+      uses: CamiloGarciaLaRotta/watermelon-http-client@v1.7
       with:
         url: https://nur-update.herokuapp.com/update?repo=${{ env.NUR_REPO }}
         method: POST
